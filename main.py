@@ -1,2 +1,2 @@
-#test
-print("Hello world")
+#Data
+
