@@ -10,7 +10,7 @@ import numpy
 
 #for images in os.listdir(r"C:\Users\jacob.itzkowitz\PycharmProjects\ImageRecognitionNumbers\Test_Images"):
 directory = r"C:\Users\jacob.itzkowitz\PycharmProjects\ImageRecognitionNumbers\Test_Images"
-pathway = os.path.join(directory, "0.jpg")
+pathway = os.path.join(directory, "1.jpg")
 image = Image.open(pathway)
 image = image.resize((28, 28))
 image = image.convert("L")
@@ -21,11 +21,10 @@ for pixel_value in pixel_values:
 
 rows, columns = 28, 28
 Image_Test_data = numpy.array(Image_Test_data)
-Image_Test_data = Image_Test_data.reshape(Image_Test_data.shape[0], rows, columns)
+Image_Test_data = Image_Test_data.reshape(1, rows, columns)
 
 
 (x_train, y_train), (x_test, y_test) = mnist.load_data()
-print(x_train.shape)
 if k.image_data_format() == 'channels_first':
     x_train = x_train.reshape(x_train.shape[0], 1, rows, columns)
     x_test = x_test.reshape(x_test.shape[0], 1, rows, columns)
