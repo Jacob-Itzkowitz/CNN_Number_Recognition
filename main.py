@@ -15,7 +15,6 @@ rows, columns = 28, 28
 x_train = x_train.reshape(x_train.shape[0], rows, columns, 1)
 x_test = x_test.reshape(x_test.shape[0], rows, columns, 1)
 size_input = (rows, columns, 1)
-print(x_train[0])
 
 y_train = keras.utils.to_categorical(y_train)
 y_test = keras.utils.to_categorical(y_test)
